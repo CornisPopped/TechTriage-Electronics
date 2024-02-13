@@ -1,3 +1,4 @@
+/* GLOBALS */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -6,39 +7,39 @@
 
 body {
     background: white;
-    color: white;
+    color: rgb(0, 0, 0);
     font-family: 'Roboto', sans-serif
 }
 
-/* Styles for the banner */
+/* Banner Stylesheet */
 .banner {
-    background-color: #1a1a1a; /* Background color for the banner */
-    color: #ffffff; /* Text color for the banner */
-    text-align: center; /* Center-align text */
-    padding: 10px; /* Add padding for spacing */
-    border-bottom: 2px solid #0056b3; /* Add border at the bottom */
+    background-color: #1a1a1a;
+    color: #ffffff;
+    text-align: center;
+    padding: 10px;
+    border-bottom: 2px solid #0056b3;
 }
 
 .banner-inner {
-    max-width: 960px; /* Limit width to prevent stretching */
-    margin: 0 auto; /* Center the banner content horizontally */
+    max-width: 960px;
+    margin: 0 auto;
 }
 
 .banner h1 {
-    margin: 0; /* Remove default margin for h1 */
-    font-size: 32px; /* Adjust font size for the heading */
+    margin: 0;
+    font-size: 32px;
 }
 
 .banner p {
-    margin: 0; /* Remove default margin for p */
-    font-size: 16px; /* Adjust font size for the paragraph */
+    margin: 0;
+    font-size: 16px;
 }
 
-/* Styles for the navigation bar */
+/* Navigation Bar Stylesheet */
 .topnav {
     overflow: hidden;
-    background-color: #f2f2f2; /* Background color for the navigation bar */
-    border-bottom: 1px solid #050404; /* Add border at the bottom */
+    background-color: #f2f2f2;
+    border-bottom: 1px solid #050404;
     border-left: 1px solid #050404;
     border-right: 1px solid #050404;
     border-top: 1px solid #050404;
@@ -46,29 +47,30 @@ body {
     align-items: center;
 }
 
+.topnav a {
+    color: #000000;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.topnav a:hover {
+    background-color: #0056b3;
+    color: white;
+}
+
+.topnav a.active {
+    background-color: #0056b3;
+    color: #ffffff;
+}
+
 .search-bar {
     margin-left: auto;
     padding: 5px;
 }
 
-.topnav a {
-    color: #000000; /* Text color for the navigation links */
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 14px; /* Adjust font size for the navigation links */
-}
-
-.topnav a:hover {
-    background-color: #0056b3;
-    color: white; /* Hover color for the navigation links */
-}
-
-.topnav a.active {
-    background-color: #0056b3; /* Active color for the navigation links */
-    color: #ffffff; /* Text color for the active navigation link */
-}
-
+/* Header Stylesheet */
 .header {
     text-align: center;
     margin-top: 20px;
@@ -79,10 +81,10 @@ body {
     color: #000000;
 }
 
-/* CSS for the image grid */
+/* Image Grid Stylesheet */
 .grid-container {
-    max-width: 1200px; /* Set a fixed width for the grid container */
-    margin: 0 auto; /* Center the grid container horizontally */
+    max-width: 1200px;
+    margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 1em;
@@ -96,10 +98,8 @@ body {
 }
 
 .grid-item img {
-    max-width: 100%; /* Ensure images don't exceed container width */
-    height: auto; /* Maintain aspect ratio */
-    /* border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); Apply box-shadow to all images */
+    max-width: 100%;
+    height: auto;
     transition: transform 0.3s ease-in-out;
 }
 
@@ -108,33 +108,90 @@ body {
 }
 
 .caption {
-    position: fixed; /* Position caption absolutely */
-    bottom: 0; /* Align caption to the bottom */
-    left: 0; /* Align caption to the left */
-    margin: 0; /* Remove margin */
-    padding: 5px; /* Add padding */
-    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background for the caption */
-    color: white; /* Text color for the caption */
-    border-radius: 0 0 10px 0; /* Rounded corners for the caption */
-    display: none; /* Hide caption by default */
-    transition: opacity 0.3s ease; /* Add transition effect for opacity */
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    margin: 0;
+    padding: 5px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border-radius: 0 0 10px 0;
+    display: none;
+    transition: opacity 0.3s ease;
 }
 
 .grid-item:hover .caption {
-    display: block; /* Show caption on hover */
+    display: block;
 }
 
+/* Section Stylesheet */
 .section-products {
     padding-bottom: 100px;
-    /* padding: 0% 20%; Add padding to the left and right sides */
 }
 
 .section-about {
-    padding-top: 100px; /* Increase padding to 100px at the top of the section */
-    padding-bottom: 100px; /* Increase padding to 100px at the bottom of the section */
+    padding-top: 100px;
+    padding-bottom: 100px;
     background-color: #706a6af8;
+    color: white;
+}
+/* Services Stylesheet */
+/* Styles for the services container */
+.services-container {
+    padding: 50px; /* Adjust padding as needed */
+    text-align: center; /* Center-align the content */
 }
 
+.services-container h2 {
+    font-size: 32px; /* Increase font size */
+    margin-bottom: 20px;
+    color: #333; /* Darker text color */
+}
+
+.services-container p {
+    font-size: 18px; /* Increase font size */
+    line-height: 1.6;
+    margin-bottom: 40px; /* Increase margin */
+    color: #666; /* Slightly lighter text color */
+}
+
+.services-list {
+    display: flex; /* Use flexbox for layout */
+    justify-content: center; /* Center-align the service categories */
+}
+
+.service-category {
+    margin: 0 20px; /* Add spacing between categories */
+    text-align: left; /* Align text to the left */
+}
+
+.service-category h3 {
+    font-size: 24px; /* Increase font size */
+    margin-bottom: 15px;
+    color: #333; /* Darker text color */
+}
+
+.service-category ul {
+    list-style: none; /* Remove default list styles */
+    padding-left: 0; /* Remove default list padding */
+}
+
+.service-category ul li {
+    margin-bottom: 10px;
+    color: #666; /* Slightly lighter text color */
+}
+
+.service-category ul li:before {
+    content: "•"; /* Use bullet points */
+    margin-right: 10px; /* Add space between bullet point and text */
+    color: #0056b3; /* Bullet point color */
+}
+
+
+
+
+
+/* About Stylesheet */
 .about-container {
     max-width: 1200px;
     margin: 0 auto;
@@ -167,6 +224,7 @@ body {
     background-color: #004080;
 }
 
+/* Footer Stylesheet */
 .footer {
     background-color: #1a1a1a;
     color: #ffffff;
@@ -180,8 +238,8 @@ body {
 }
 
 .footer-icon {
-    width: 40px; /* Adjust the size as needed */
-    margin: 0 10px; /* Adjust the spacing between icons */
+    width: 40px;
+    margin: 0 10px;
 }
 
 .footer-content a {
@@ -189,7 +247,7 @@ body {
     color: black;
 }
 
-/* Dropdown button */
+/* Dropdown Stylesheet */
 .dropdown {
     float: left;
     overflow: hidden;
@@ -206,7 +264,6 @@ body {
     margin: 0;
 }
 
-/* Dropdown content */
 .dropdown-content {
     display: none;
     position: absolute;
@@ -216,7 +273,6 @@ body {
     z-index: 1;
 }
 
-/* Links inside the dropdown */
 .dropdown-content a {
     color: black;
     padding: 12px 16px;
@@ -224,12 +280,10 @@ body {
     display: block;
 }
 
-/* Change color of dropdown links on hover */
 .dropdown-content a:hover {
     background-color: #000000;
 }
 
-/* Show the dropdown menu on hover */
 .dropdown:hover .dropdown-content {
     display: block;
 }
