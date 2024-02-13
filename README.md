@@ -8,7 +8,6 @@ Welcome to the TechTriage PC Repairs Website project! This website serves as a p
 - [Technologies Used](#technologies-used)
 - [Usage](#usage)
 - [Contributing](#contributing)
-- [License](#license)
 
 ## Description
 The TechTriage PC Repairs Website is a single-page website designed to showcase the services offered by TechTriage, provide information about the company, and allow users to browse and purchase computer parts.
