@@ -1,0 +1,235 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: white;
+    color: white;
+    font-family: 'Roboto', sans-serif
+}
+
+/* Styles for the banner */
+.banner {
+    background-color: #1a1a1a; /* Background color for the banner */
+    color: #ffffff; /* Text color for the banner */
+    text-align: center; /* Center-align text */
+    padding: 10px; /* Add padding for spacing */
+    border-bottom: 2px solid #0056b3; /* Add border at the bottom */
+}
+
+.banner-inner {
+    max-width: 960px; /* Limit width to prevent stretching */
+    margin: 0 auto; /* Center the banner content horizontally */
+}
+
+.banner h1 {
+    margin: 0; /* Remove default margin for h1 */
+    font-size: 32px; /* Adjust font size for the heading */
+}
+
+.banner p {
+    margin: 0; /* Remove default margin for p */
+    font-size: 16px; /* Adjust font size for the paragraph */
+}
+
+/* Styles for the navigation bar */
+.topnav {
+    overflow: hidden;
+    background-color: #f2f2f2; /* Background color for the navigation bar */
+    border-bottom: 1px solid #050404; /* Add border at the bottom */
+    border-left: 1px solid #050404;
+    border-right: 1px solid #050404;
+    border-top: 1px solid #050404;
+    display: flex;
+    align-items: center;
+}
+
+.search-bar {
+    margin-left: auto;
+    padding: 5px;
+}
+
+.topnav a {
+    color: #000000; /* Text color for the navigation links */
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 14px; /* Adjust font size for the navigation links */
+}
+
+.topnav a:hover {
+    background-color: #0056b3;
+    color: white; /* Hover color for the navigation links */
+}
+
+.topnav a.active {
+    background-color: #0056b3; /* Active color for the navigation links */
+    color: #ffffff; /* Text color for the active navigation link */
+}
+
+.header {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.header h2 {
+    font-size: 24px;
+    color: #000000;
+}
+
+/* CSS for the image grid */
+.grid-container {
+    max-width: 1200px; /* Set a fixed width for the grid container */
+    margin: 0 auto; /* Center the grid container horizontally */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1em;
+    padding: 20px;
+    justify-content: center;
+}
+
+.grid-item {
+    display: flex;
+    justify-content: center;
+}
+
+.grid-item img {
+    max-width: 100%; /* Ensure images don't exceed container width */
+    height: auto; /* Maintain aspect ratio */
+    /* border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); Apply box-shadow to all images */
+    transition: transform 0.3s ease-in-out;
+}
+
+.grid-item img:hover {
+    transform: scale(1.05);
+}
+
+.caption {
+    position: fixed; /* Position caption absolutely */
+    bottom: 0; /* Align caption to the bottom */
+    left: 0; /* Align caption to the left */
+    margin: 0; /* Remove margin */
+    padding: 5px; /* Add padding */
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background for the caption */
+    color: white; /* Text color for the caption */
+    border-radius: 0 0 10px 0; /* Rounded corners for the caption */
+    display: none; /* Hide caption by default */
+    transition: opacity 0.3s ease; /* Add transition effect for opacity */
+}
+
+.grid-item:hover .caption {
+    display: block; /* Show caption on hover */
+}
+
+.section-products {
+    padding-bottom: 100px;
+    /* padding: 0% 20%; Add padding to the left and right sides */
+}
+
+.section-about {
+    padding-top: 100px; /* Increase padding to 100px at the top of the section */
+    padding-bottom: 100px; /* Increase padding to 100px at the bottom of the section */
+    background-color: #706a6af8;
+}
+
+.about-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.about-container h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.about-container p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.about-container button {
+    padding: 10px 20px;
+    background-color: #0056b3;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.about-container button:hover {
+    background-color: #004080;
+}
+
+.footer {
+    background-color: #1a1a1a;
+    color: #ffffff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-content {
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.footer-icon {
+    width: 40px; /* Adjust the size as needed */
+    margin: 0 10px; /* Adjust the spacing between icons */
+}
+
+.footer-content a {
+    text-decoration: none;
+    color: black;
+}
+
+/* Dropdown button */
+.dropdown {
+    float: left;
+    overflow: hidden;
+}
+
+.dropbtn {
+    font-size: 14px;
+    border: none;
+    outline: none;
+    color: rgb(0, 0, 0);
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+}
+
+/* Dropdown content */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: rgb(255, 255, 255);
+    min-width: 160px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+    background-color: #000000;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
